@@ -7,14 +7,13 @@ import { Observable }  from 'rxjs'
     providedIn: 'root',
   })
 export class chintanService{
-    private chintanSerUrl = '../assets/experinceSummaryData.json';
+    private chintanSerUrl = './assets/experinceSummaryData.json';
     constructor(private http: HttpClient)
     {
-        console.log(this.http.get<any>(this.chintanSerUrl));
+       
     }
 
     getTrasportationReport() : Observable<any> {
-        console.log(this.http.get<any>(this.chintanSerUrl));
         return this.http.get<any>(this.chintanSerUrl);
     }
 }

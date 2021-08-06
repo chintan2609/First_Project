@@ -16,15 +16,16 @@ export class AppComponent implements OnInit {
 
   constructor(private chintanservice : chintanService)
   {  
+
   }
 
    ngOnInit()
    {
-    // this.chintanservice.getTrasportationReport().subscribe((res: any)=>
-     //{
-       //this.transportationReport = res;
-       //console.log(this.transportationReport);
-     //});
+     this.chintanservice.getTrasportationReport().subscribe((res: any)=>
+     {
+       this.transportationReport = res;
+      console.log(this.transportationReport);
+     });
        }
 }
 
